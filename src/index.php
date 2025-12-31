@@ -126,7 +126,7 @@ if ($name === null) {
 }
 
 foreach ($lights as $light) {
-    if ($light->getName() === $name) {
+    if (strtolower($light->getName()) === strtolower($name)) {
         if ($color === null && $brightness === null && $temp === null) {
             if ($status === null) {
                 $status = !$light->isOn();
